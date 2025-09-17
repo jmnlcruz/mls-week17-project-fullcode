@@ -34,7 +34,7 @@ jobs:
       - name: 'Az CLI login'
         uses: azure/login@v1
         with:
-          creds: ${{secrets.cred}}
+          creds: ${{secrets.creds}}
       - name: install-extension
         run: az extension add -n ml -y
       - name: update-extension
