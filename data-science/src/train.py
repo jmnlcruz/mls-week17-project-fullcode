@@ -20,11 +20,11 @@ def parse_args():
     # -------- WRITE YOUR CODE HERE --------
     
     # Step 1: Define arguments for train data, test data, model output, and RandomForest hyperparameters. Specify their types and defaults.  
-    parser.add_parameter("--train_data", type=str, help="Location of train dataset")
-    parser.add_parameter("--test_data", type=str, help="Location of test dataset")
-    parser.add_parameter("--model_output", type=str, help="Output location for model")
-    parser.add_parameter("--n_estimators", type=int, help="Number of estimators in random forest")
-    parser.add_parameter("--max_depth", type=int, help="Maximum tree depth in randon forest")
+    parser.add_argument("--train_data", type=str, help="Location of train dataset")
+    parser.add_argument("--test_data", type=str, help="Location of test dataset")
+    parser.add_argument("--model_output", type=str, help="Output location for model")
+    parser.add_argument("--n_estimators", type=int, help="Number of estimators in random forest")
+    parser.add_argument("--max_depth", type=int, help="Maximum tree depth in randon forest")
     
     args = parser.parse_args()
 
