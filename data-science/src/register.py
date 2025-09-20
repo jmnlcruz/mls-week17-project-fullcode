@@ -36,8 +36,7 @@ def main(args):
     # Step 2: Log the loaded model in MLflow with the specified model name for versioning and tracking.  
     mlflow.sklearn.log_model(
         sk_model = model,
-        registered_model_name = "used_cars_price_prediction_model",
-        artifact_path = "random_forest_price_regressor"
+        registered_model_name = args.model_name
     )
 
     # Step 3: Register the logged model using its URI and model name, and retrieve its registered version.  
