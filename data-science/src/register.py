@@ -34,10 +34,7 @@ def main(args):
     model = mlflow.sklearn.load_model(args.model_path)
 
     # Step 2: Log the loaded model in MLflow with the specified model name for versioning and tracking.  
-    mlflow.sklearn.log_model(
-        sk_model = model,
-        registered_model_name = args.model_name
-    )
+    mlflow.sklearn.log_model(model, args.model_name)
 
     # Step 3: Register the logged model using its URI and model name, and retrieve its registered version.  
     run_id = mlflow.active_run().info.run_id
